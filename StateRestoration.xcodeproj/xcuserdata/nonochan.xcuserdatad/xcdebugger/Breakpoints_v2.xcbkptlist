@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "622DEF3E-1717-4F52-BB84-4611F62E0D83"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EE210E08-2F1E-4972-9D69-BAD898502451"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "StateRestoration/SceneDelegate.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
+            landmarkName = "stateRestorationActivity(for:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A3BEC222-E2C0-4AD3-8A13-8E21FDACC687"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "StateRestoration/SceneDelegate.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
+            landmarkName = "configure(window:with:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "A3BEC222-E2C0-4AD3-8A13-8E21FDACC687 - 1a784315d5aa5634"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "StateRestoration.SceneDelegate.configure(window: Swift.Optional&lt;__C.UIWindow&gt;, with: __C.NSUserActivity) -&gt; Swift.Bool"
+                  moduleName = "StateRestoration"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nonochan/Desktop/StateRestoration/StateRestoration/SceneDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "81"
+                  endingLineNumber = "81"
+                  offsetFromSymbolStart = "412">
+               </Location>
+               <Location
+                  uuid = "A3BEC222-E2C0-4AD3-8A13-8E21FDACC687 - 1a784315d5aa5634"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "StateRestoration.SceneDelegate.configure(window: Swift.Optional&lt;__C.UIWindow&gt;, with: __C.NSUserActivity) -&gt; Swift.Bool"
+                  moduleName = "StateRestoration"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nonochan/Desktop/StateRestoration/StateRestoration/SceneDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "81"
+                  endingLineNumber = "81"
+                  offsetFromSymbolStart = "696">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

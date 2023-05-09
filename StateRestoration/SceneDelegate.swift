@@ -10,13 +10,26 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-
-
+    
+    var main: ViewController!
+    
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
-        // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
-        // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-        guard let _ = (scene as? UIWindowScene) else { return }
+        
+        guard let windowScene = (scene as? UIWindowScene) else { return }
+
+        window = UIWindow(frame: windowScene.coordinateSpace.bounds)
+        window?.windowScene = windowScene
+        main = ViewController()
+        window?.rootViewController = main
+        window?.makeKeyAndVisible()
+        
+        guard let userActivity = connectionOptions.userActivities.first ?? session.stateRestorationActivity else { return }
+
+        if configure(window: window, with: userActivity) {
+            scene.userActivity = userActivity
+        } else {
+            print("Failed to restore scene from \(userActivity)")
+        }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -47,6 +60,35 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // to restore the scene back to its current state.
     }
 
+    // MARK: -  State Restoration
+    static let selectedTabKey = "selectedTab"
 
+    func stateRestorationActivity(for scene: UIScene) -> NSUserActivity? {
+        print("store")
+        return scene.userActivity
+    }
+    
+    static let MainSceneActivityType = { () -> String in
+        let activityTypes = Bundle.main.infoDictionary?["NSUserActivityTypes"] as? [String]
+        return activityTypes![0]
+    }
+    
+    func configure(window: UIWindow?, with activity: NSUserActivity) -> Bool {
+        var succeeded = false
+        
+        if activity.activityType == SceneDelegate.MainSceneActivityType() {
+            if let userInfo = activity.userInfo {
+                if let selectedTab = userInfo[SceneDelegate.selectedTabKey] as? Int {
+                    main.restoredSelectedTab = selectedTab
+                }
+                succeeded = true
+            }
+        } else {
+
+        }
+        
+        return succeeded
+    }
+    
 }
 

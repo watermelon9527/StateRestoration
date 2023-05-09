@@ -21,5 +21,11 @@
 			</array>
 		</dict>
 	</dict>
+	<key>CFBundleIdentifier</key>
+	<string></string>
+	<key>NSUserActivityTypes</key>
+	<array>
+		<string>com.gmail.-023-StateRestoringPractice</string>
+	</array>
 </dict>
 </plist>
